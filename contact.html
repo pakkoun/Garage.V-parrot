@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Garage V. Parrot</title>
+    <link rel="stylesheet" href="assets/garageV.parrot.css">
+</head>
+<body>
+    <header>
+        <a class="logo" href="garageV.parrot.html">
+            <img src="img/garage parrot.png" alt="logo garage parrot">
+        <h1>Garage V. Parrot</h1>
+        <nav>
+            <ul>
+                <li><a href="garageV.parrot.html">Accueil</a></li>
+                <li><a href="voiture.html">Vente</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="contact">
+            <h2>Nous Contacter</h2>
+            <form action="/contact" method="POST">
+                <label for="nom">Nom:</label>
+                <input type="text" id="nom" name="nom" required><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+                <label for="telephone">Téléphone:</label>
+                <input type="tel" id="telephone" name="telephone"><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" required></textarea><br>
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Horaires d'ouverture: Lundi-Vendredi 8h-18h, Samedi 8h-12h</p>
+        <p>Adresse: 123 Rue du Garage, 31000 Toulouse</p>
+        <p>Téléphone: 01 23 45 67 89</p>
+        <p>Email: contact@garageparrot.com</p>
+    </footer>
+    <script src="assets/garageV;parrot.js"></script>
+</body>
+</html>

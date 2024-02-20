@@ -1,0 +1,78 @@
+<html lang="fr"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garage V. Parrot</title>
+    <link rel="stylesheet" href="assets/garageV.parrot.css"
+  
+    <!-- favicon  -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/images/favicon/site.webmanifest">
+  
+    <!-- jquery  -->
+    <body>
+    <header class="header">
+        <nav class="nav">
+          <a class="logo" href="garageV.parrot.html">
+            <img src="img/garage parrot.png" alt="logo garage parrot">
+          </a>
+          <!-- HAMBURGER MENU  -->
+          <div class="mobile-menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+          <ul class="nav-list">
+            <li>
+              <a href="garageV.parrot.html" class="btn-wire">Accueil</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <div class="wrapper">
+
+        <!-- connection  -->
+        <section class="connection w-min sections" id="connection">
+          <h1 class="header-titles">Connexion</h1>
+          <!-- messages  -->
+          <div id="form-message" class="my-3 mt-3 d-flex justify-content-center"></div>
+      
+          <div class="connection-wrapper w-min">
+      
+            <form method="POST" id="connectionForm">
+              <div class="connection-form">
+      
+                <div class="form-group">
+                  <label for="email">Adresse email</label>
+                  <input type="text" name="email" id="email" minlength="15" maxlength="40" placeholder="email@example.fr" autocomplete="off">
+                  <span class="error" id="email_err"> </span>
+                </div>
+                <div class="form-group">
+                  <label for="password">
+                    Mot de passe
+                  </label>
+                  <div class="input-group">
+                    <input type="password" name="password" id="password" class="form-control" minlength="8" maxlength="16" autocomplete="off">
+                    <div class="input-group-append">
+                      <span class="input-group-text" onclick="password_show_hide();">
+                        <i class="fas fa-eye" id="show_eye" aria-hidden="true"></i>
+                        <i class="fas fa-eye-slash d-none" id="hide_eye" aria-hidden="true"></i>
+                      </span>
+                    </div>
+                  </div>
+                  <span class="error" id="password_err"> </span>
+                </div>
+              </div>
+              <input type="hidden" name="token" value="4f2b981b18c10fb0f60d7c8d9098eed4d3f5a3bca8327ef358fd244b0739">
+              <div class="form-btn">
+                <button type="button" id="submitbtn" class="btn-fill">Connecter</button>
+              </div>
+      
+            </form>
+          </div>
+        </section>
+        <!-- END CONTACT  -->
+      </div>
+    </body>
