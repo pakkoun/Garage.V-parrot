@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garage V.parrot</title>
+    <link rel="stylesheet" href="assets/garageV.parrot.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a class="logo" href="Garage.parrot.html">
+                <img src="img/garage parrot.png" alt="logo garage parrot">
+            </a>
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-list">
+                <li>
+                  <a class="nav-link" aria-current="page" href="#">Accueil</a>
+                </li>
+                <li>
+                  <a class="nav-link" aria-current="page" href="#services">Services</a>
+                </li>
+                <li>
+                  <a class="nav-link" aria-current="page" href="#cars">Voitures</a>
+                </li>
+                <li>
+                    <a class="nav-link" aria-current="page" href="#contact">Contact</a>
+                </li>
+                <li>
+                  <a href="connection.html" class="btn-wire">Connecter</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="breadcrumbs breadcrumbs-connection">
+            <div class="go-back-list">
+              <a href="Garage.parrot.html">Revenir page accueil</a>
+            </div>
+          </div>
+          <section class="contact contact-buy-car sections" id="contact">
+            <h1 class="header-titles">Donner votre avis</h1>
+        
+            <!-- messages  -->
+            <div id="form-message" class="my-3 mt-3 d-flex justify-content-center"></div>
+        
+            <div class="contact-wrapper">
+              <p class="text-center active">Votre avis est très important pour nous.</p>
+        
+              <form method="POST" id="addReview">
+        
+                <div class="connection-form">
+                  <div class="form-group">
+                    <label for="client">Votre nom</label>
+                    <input type="text" name="client" id="client" minlength="5" maxlength="50" placeholder="Dupont Jean-Charles" autocomplete="off">
+                    <span class="error" id="client_err"> </span>
+                  </div>
+                  <div class="form-group">
+                    <label for="comment">Votre commentaire</label>
+                    <textarea name="comment" id="comment" class="comment" cols="30" rows="5" minlength="15" maxlength="250"> </textarea>
+                    <span class="error" id="comment_err"> </span>
+                  </div>
+                  <div class="form-group">
+                    <label for="note">Votre note</label>
+                    <select name="note" id="note" class="form-control note">
+                      <option value="">Choisissez une note</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                    <span class="error" id="note_err"> </span>
+                  </div>
+                </div>
+                <input type="hidden" name="token" value="6445565f007f05b2ea34b4b1c2a45e6ba1039699311ae67ca47df43f546d">
+                <div class="form-btn">
+                  <button type="button" id="submitbtn" class="btn-fill">Envoyez</button>
+                </div>
+              </form>
+            </div>
+          </section>
+    </main>
+    <footer>
+        <section id="horaire"></section>
+        <p>Horaires d'ouverture: Lundi-Vendredi 8h-18h, Samedi 8h-12h</p>
+        <p>Adresse: 123 Rue du Garage, 31000 Toulouse</p>
+        <p>Téléphone: 01 23 45 67 89</p>
+        <p>Email: contact@garageparrot.com</p>
+    </footer>
+    <script src="assets/garageV;parrot.js"></script>
+</body>
+</html>

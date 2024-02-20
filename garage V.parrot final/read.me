@@ -1,0 +1,241 @@
+Garage V.parrot
+Ce dépôt contient le code source du site web du Garage V.parrot, un garage automobile offrant une gamme de services de réparation, 
+de vente de voitures d'occasion et d'avis clients.
+
+Contenu
+index.html: Fichier principal contenant la structure HTML de la page d'accueil du site.
+
+assets/: Répertoire contenant les ressources telles que les feuilles de style CSS et les scripts JavaScript.
+
+garageV.parrot.css: Feuille de style CSS pour la mise en forme du site.
+
+garageV;parrot.js: Script JavaScript pour la fonctionnalité interactive du site.
+
+img/: Répertoire contenant les images utilisées sur le site.
+
+connection.html: Page de connexion pour les utilisateurs enregistrés.
+
+avis.html: Page permettant aux utilisateurs de soumettre leurs avis sur les services du garage.
+
+peugeot.html, bmw.html, voiture.html: Pages détaillant les informations sur des voitures spécifiques disponibles à la vente.
+
+README.md: Ce fichier README fournissant des informations sur le projet.
+
+Fonctionnalités
+Navigation: La barre de navigation permet aux utilisateurs de naviguer facilement entre les différentes sections du site.
+Services: Présentation des services offerts par le garage, avec des descriptions détaillées et des images illustratives.
+Voitures d'occasion: Présentation des voitures d'occasion disponibles à la vente, avec des informations sur les modèles, les années, 
+les kilométrages et les prix.
+Avis clients: Affichage des avis clients sur les services du garage, avec des évaluations en étoiles et des commentaires.
+Formulaire de contact: Formulaire permettant aux visiteurs du site de soumettre des demandes de renseignements ou de rendez-vous.
+Contact
+Pour toute question ou demande de support, veuillez contacter l'équipe du Garage V.parrot à l'adresse suivante : contact@garageparrot.com.
+
+
+A- Spécifications Techniques
+Serveur:
+	•	Hébergement: Fly.io
+	•	PHP: Version 8.2
+Extension PHP: PDO
+	•	Base de données: MariaDB (version 10.11)
+Frontend:
+	•	HTML: Version 5
+	•	CSS: Version 3
+	•	Framework CSS: Bootstrap
+	•	JavaScript
+Backend:
+	•	PHP: Version 8.2 avec PDO
+	•	Framework PHP: Symfony 6.2
+	•	Base de données: MySQL
+B. Diagramme de Cas d'utilisation
+[A compléter]
+C. Diagrammes de Séquence
+Décrivez grâce à ce schéma le processus d’un nouveau visiteur qui :
+	•	Découvre la liste des véhicules d’occasion
+	•	Filtre selon ses critères
+	•	Remplit le formulaire pour en savoir plus à propos d’une voiture en particulier
+
+B-Diagramme de cas d'utilisation
+                                            Utilisateur
+                                                |
+                                   +--------------------------+
+                                   |       Naviguer sur       |
+                                   |       le site web       |
+                                   +------------+-------------+
+                                                |
+                                                v
+                          +---------------------+-----------------------+
+                          |                     |                       |
+                          v                     v                       v
+             +------------+------------+    +---+---+             +---+---+
+             |                         |    |       |             |       |
+             |  Consulter les         |    |  Voir  |             |  Donner  |
+             |  services offerts     |    |  voitures         |  un avis |
+             |                         |    |  d'occasion    |             |
+             +-------------------------+    +------+--------+   +---------+
+                                                     |                    |
+                                                     v                    v
+                                         +-----------+-----------+  +--+--+
+                                         |                           |  |  |
+                                         |   Contacter le garage   |  |  |
+                                         |                           |  |  |
+                                         +---------------------------+  |  |
+                                                                        v  v
+                                                                    Administrateur
+
+C- Diagrammes de Séquence
+Utilisateur                         Site web du garage V.parrot
+    |                                          |
+    |     Effectue une demande de              |
+    |     consultation des services offerts    |
+    |------------------------------------------>|
+    |                                          |
+    |                                          |
+    |                                          |
+    |                                          |
+    |                                          |
+    |                                          |
+    |                                          |
+    |                                          |
+    |                                          |
+    |                                          |
+    |                                          |
+    |                                          |
+    |                                          |
+    |                                          |
+    |                                          |
+    |<-----------------------------------------|
+    |    Retourne la liste des services        |
+    |    offerts avec leurs détails            |
+    |                                          |
+L'utilisateur initie l'action en demandant à consulter les services offerts sur le site web du garage V.parrot.
+Le site web reçoit la demande de l'utilisateur.
+Le site web traite la demande et récupère les informations sur les services offerts.
+Le site web renvoie la liste des services offerts avec leurs détails à l'utilisateur.
+L'utilisateur reçoit la liste des services offerts et peut consulter les détails de chaque service proposé.
+Ce diagramme de séquence met en évidence la séquence d'actions entre l'utilisateur et le site web lors de 
+la consultation des services offerts.
+
+D- diagramme de classe
+                  +-------------------------------------+
+                  |               Utilisateur           |
+                  +-------------------------------------+
+                  | + consulterServicesOfferts()        |
+                  | + voirVoituresOccasion()            |
+                  | + donnerAvis()                      |
+                  | + contacterGarage()                 |
+                  +-------------------------------------+
+                                ^
+                                |
+                                | Utilise
+                                |
+                  +-------------------------------------+
+                  |           SiteWebGarage             |
+                  +-------------------------------------+
+                  | + listerServicesOfferts()           |
+                  | + listerVoituresOccasion()         |
+                  | + recevoirAvis()                    |
+                  | + recevoirDemandeContact()          |
+                  +-------------------------------------+
+Utilisateur est une classe représentant les utilisateurs du site web. 
+Ils peuvent effectuer différentes actions telles que consulter les services offerts, 
+voir les voitures d'occasion, donner un avis et contacter le garage.
+SiteWebGarage est une classe représentant le site web du garage V.parrot. 
+Il offre des fonctionnalités telles que la liste des services offerts, la liste des voitures d'occasion, 
+la réception des avis des utilisateurs et la réception des demandes de contact.
+
+
+
+Chartre graphique:
+A-
+Couleurs :
+	•	Primaire : #ffd700 (Jaune soleil)
+	•	Secondaire : #26273c (Couleur secondaire - foncée)
+	•	Gris clair : #f3f3f3
+	•	Gris foncé : #898989
+	•	Police : #26273c (Couleur de la police)
+	•	Overlay : #1c1c1cb3
+	•	Max-width : 2000px
+	•	Max-wrapper : 1200px
+Styles généraux :
+	•	Réinitialisation : Marges et paddings à 0, box-sizing: border-box
+	•	Police par défaut : Roboto, sans-serif, taille 16px, ligne 1.5
+	•	Liens : Police de couleur primaire, pas de soulignement, couleur primaire au survol
+	•	En-tête : Fond couleur primaire, centré, padding 20px 0
+	•	Logo : Largeur maximale 100px
+	•	Navigation : Liste horizontale, centrée, couleur de police primaire, gras, couleur secondaire au survol
+	•	Conteneur principal : Largeur maximale de max-wrapper, centré
+	•	Titre de section : Centré, marges, couleur de police
+	•	Bouton principal : Affichage en ligne, padding, fond couleur secondaire, couleur de texte blanc, pas de bordure, bordure arrondie, curseur pointer, transition de couleur de fond
+	•	Pied de page : Fond couleur primaire, couleur de police, centré, padding 20px 0
+
+B-
+Maquette
+---------------------------------------------------------
+|                     Garage V.parrot                    |
+---------------------------------------------------------
+| [ Logo ]  Menu icon                                    |
+---------------------------------------------------------
+|                                                       |
+|             15 ans ça en fait de l'expérience         |
+|                                                       |
+|     Le garage V. Parrot sera ravi de vous faire      |
+|     profiter de ses services de qualité ainsi que    |
+|     de son professionnalisme.                        |
+|                                                       |
+---------------------------------------------------------
+|                     Services                          |
+---------------------------------------------------------
+| [Image: Pneu]  [Image: Amortisseurs]  [Image: Batterie]|
+|   Changement de pneu     Réparation des amortisseurs  |
+|  Notre équipe vous      Nous avons plusieurs années   |
+|  propose un service     d'expérience dans la réparation|
+|  de qualité pour le     d'amortisseurs de voitures.   |
+|  changement des pneus.  Notre sécurité est le plus    |
+|                          important pour notre client. |
+|                          On travaille avec les        |
+|                          meilleures marques de        |
+|                          batteries du marché.         |
+|                                                       |
+---------------------------------------------------------
+|                 Nos voitures d'occasion              |
+---------------------------------------------------------
+| [Image: Peugeot 208]     [Image: BMW Série 1]         |
+|  Peugeot 208             BMW Série 1                  |
+|  2015 | 70,000 km         2017 | 50,000 km             |
+|  Automatique | Diesel     Automatique | Diesel        |
+|  Prix: €8,500             Prix: €19,000               |
+|  [Détails]                [Détails]                   |
+|                                                       |
+|              [Voir plus de voitures]                 |
+---------------------------------------------------------
+|                     Les Avis                          |
+---------------------------------------------------------
+| [ Nom: Jack Daniel ]                                  |
+|   Commentaire: "Très satisfait"                       |
+|   Évaluation: ★★★★★                                   |
+|                                                       |
+| [ Nom: Jean Bonheur ]                                 |
+|   Commentaire: "Très bon service et prix correct"    |
+|   Évaluation: ★★★★★                                   |
+|                                                       |
+|                 [Donner votre avis]                   |
+---------------------------------------------------------
+|                     Contact                           |
+---------------------------------------------------------
+|   Comment pouvons-nous vous aider?                    |
+|                                                       |
+|   [ Nom ]       [ Prénom ]       [ Adresse e-mail ]   |
+|                                                       |
+|   [ Téléphone ] [ Sujet ]                            |
+|                                                       |
+|   [ Message ]                                        |
+|                                                       |
+|                      [ Envoyer ]                      |
+---------------------------------------------------------
+|  Horaires d'ouverture:                                |
+|  Lundi-Vendredi 8h-18h, Samedi 8h-12h                |
+|  Adresse: 123 Rue du Garage, 31000 Toulouse           |
+|  Téléphone: 01 23 45 67 89                            |
+|  Email: contact@garageparrot.com                      |
+---------------------------------------------------------
